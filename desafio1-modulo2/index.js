@@ -3,6 +3,33 @@
 
 
 // 01 - crie uma condição composta com uma variável dia e a condição verifica se está de dia mostre 'claro' senão mostre está 'de noite'
+//var buttonTime = document.getElementsByClassName('dia');
+console.log("**Exercicio 1** - APERTE O BOTAO")
+function change() {
+  let buttonTime = document.querySelector('button')
+  let textTime = document.querySelector('h3')
+    if (buttonTime.classList.contains('dia')){
+        //Config Botao
+        buttonTime.classList.remove('dia')
+        buttonTime.classList.add('noite')
+        buttonTime.textContent = 'NOITE'
+
+        //Textos
+        console.log("Está de Noite")
+        textTime.textContent = 'Está de Noite'
+    } else {
+      //Config Botao
+      buttonTime.classList.remove('noite')
+      buttonTime.classList.add('dia')
+      buttonTime.textContent = 'DIA'
+
+      //Textos
+      console.log("Está de Dia")
+      textTime.textContent = 'Está de Dia'
+    }
+
+}
+
 
 // 02
 console.log('**Exercicio 2**')
@@ -163,6 +190,6 @@ let cadastro = [
 
 // 20 - Mostre no console o nome de um amigo de cada lista.
 console.log('**Exercicio 20**')
-for ( let i = 0; i <= 5; i++){
+for ( let i = 0; i <= 4; i++){
     console.log(cadastro[i].amigos[0])
 }
